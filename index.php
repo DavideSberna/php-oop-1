@@ -10,25 +10,26 @@
 <body>
     <?php
     include __DIR__ . '/Models/Movie.php';
-    $movies = array($movie1, $movie2, $movie3, $movie4);
+    include __DIR__ . '/partials/settings.php';
     ?>
 
 <section class="container">
     <div class="row">
         <?php foreach ($movies as $movie) {?>
             <div class="col-sm-12 col-md-4 col-lg-3 pt-2 pb-2">
-                <div class="card p-2">
+                <div class="card">
                     <?php echo "<img src='$movie->image' alt=''>" ?>
-                    <?php echo "<p>" . $movie->title . "</p>" ?>
-                    <?php echo "<p>" . $movie->original_title . "</p>" ?>
-                    <?php echo "<p>" . $movie->nationality . "</p>" ?>
-                    <?php echo "<p>" . $movie->date . "</p>" ?>
-                    <?php echo "<p>" . $movie->vote . "</p>" ?>
+                    <div class="p-2">
+                        <?php echo "<h3>" . $movie->title . "</h3>" ?>
+                        <?php echo "<p>" . $movie->nationality . "</p>" ?>
+                        <?php echo "<p>" . $movie->date . "</p>" ?>
+                        <?php echo "<p>" . $movie->vote . "</p>" ?>
+                    </div>
                 </div>
             </div>
         <?php } ?>   
     </div>
-    <img src="" alt="">
+   
 </section>
 
     

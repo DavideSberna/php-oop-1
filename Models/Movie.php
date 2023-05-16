@@ -15,13 +15,16 @@ class Movie {
         $this->date = $date;
         $this->vote = $vote;
     }
+    public static function fetchAll($conn){
+        $sql = "SELECT * FROM `movies`";
+        $result = $conn->query($sql);
+        return $result;
+    }
+
+     
 
 }
 
-$movie1 = new Movie('https://www.themoviedb.org/t/p/w600_and_h900_bestv2/r4gnMXoY1efvaolNDjn3nj4046S.jpg', 'Il Padrino', 'The Godfather','en','1972-03-24','9.2');
-$movie2 = new Movie('https://www.themoviedb.org/t/p/w600_and_h900_bestv2/r4gnMXoY1efvaolNDjn3nj4046S.jpg', 'Il Padrino', 'The Godfather','en','1972-03-24','9.2');
-$movie3 = new Movie('https://www.themoviedb.org/t/p/w600_and_h900_bestv2/r4gnMXoY1efvaolNDjn3nj4046S.jpg', 'Il Padrino', 'The Godfather','en','1972-03-24','9.2');
-$movie4 = new Movie('https://www.themoviedb.org/t/p/w600_and_h900_bestv2/r4gnMXoY1efvaolNDjn3nj4046S.jpg', 'Il Padrino', 'The Godfather','en','1972-03-24','9.2');
 
  
 
