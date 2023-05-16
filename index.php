@@ -18,13 +18,17 @@
         <?php foreach ($movies as $movie) {?>
             <div class="col-sm-12 col-md-4 col-lg-3 pt-2 pb-2">
                 <div class="card p-2">
-                    <?php echo "<h2>" . $movie->title . "</h2>" ?>
-                    <?php echo "<p>" . $movie->description . "</p>" ?>
-                    <?php echo "<p>" . $movie->state . "</p>" ?>
+                    <?php echo "<img src='$movie->image' alt=''>" ?>
+                    <?php echo "<p>" . $movie->title . "</p>" ?>
+                    <?php echo "<p>" . $movie->original_title . "</p>" ?>
+                    <?php echo "<p>" . $movie->nationality . "</p>" ?>
+                    <?php echo "<p>" . $movie->date . "</p>" ?>
+                    <?php echo "<p>" . $movie->vote . "</p>" ?>
                 </div>
             </div>
         <?php } ?>   
     </div>
+    <img src="" alt="">
 </section>
 
     
